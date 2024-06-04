@@ -1,5 +1,5 @@
 import "./App.css";
-import MovieCard from "./component/MoveiCard";
+import MovieCard from "./component/movieCard";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
