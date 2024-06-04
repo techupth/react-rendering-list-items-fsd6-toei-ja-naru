@@ -18,9 +18,9 @@ function App() {
 }
 
 function MovieList() {
-  return movies.map((movie) => {
+  return movies.map((movie, index) => {
     return (
-      <div className="movie-card">
+      <div className="movie-card" key={index}>
         <div>
           <img src={movie.image} width={100} height={102} />
         </div>
@@ -29,9 +29,9 @@ function MovieList() {
           <p>Year: {movie.year}</p>
           <p>Runtime: {movie.runtime}</p>
           <p class="genres">
-            Genres:{" "}
-            {movie.genres.map((genres) => {
-              return <div>{genres}</div>;
+            Genres:
+            {movie.genres.map((genre, index) => {
+              return <div key={index}>{genre}</div>;
             })}
           </p>
           <p>IMDB Ratings: {movie.imdbRating}</p>
